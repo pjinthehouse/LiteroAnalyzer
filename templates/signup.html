@@ -1,0 +1,44 @@
+{%extends 'layouts.html'%}
+
+{%block content%}
+	<!-- Main div code -->
+	<div id="main" style="margin-top: 40px;">
+	<div class="h-tag" style="margin-left: 50px;">
+	<h2>Create Your Account</h2>
+	</div>
+	<!-- create account div -->
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<form action = "/signing_up" method = "post">
+	<tr>
+	<td align="right">Enter Name :</td>
+	<td><input type="text" name = "name" placeholder="Enter user here" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Email ID :</td>
+	<td><input type="text" name = "email" placeholder="Enter Email ID here" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Username :</td>
+	<td><input type="text" name = "Uname" placeholder="Enter Username here" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Password :</td>
+	<td><input type="password" name = "Password" placeholder="Enter Password here" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Confirm Password :</td>
+	<td><input type="password" name = "c_Password" placeholder="Enter Password here" class="tb" /></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<input type="reset" value="Clear Form" id="res" class="btn" />
+	<input type="submit" value="Create Account" class="btn" /></td>
+	</tr>
+	</form>
+	</table>
+	</div>
+	<!-- create account box ending here.. -->
+	</div>
+{%endblock content%}

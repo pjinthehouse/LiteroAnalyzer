@@ -1,0 +1,19 @@
+{%extends 'layouts1.html'%}
+
+{%block content%}  
+
+<p>
+	<h3> Choose the characters whose networks need to be analysed. </h3>
+</p>
+<form action = "/select_char_nw_analysis" method = "post">
+	<div>
+	<input type = "checkbox" value = "all" name = "entities"> All <br/>
+	{% for i in names %}
+		<input type = "checkbox" value = "{{i}}" name = "entities"> {{i}}
+		<br/>
+	{% endfor %}
+	</div>
+	<input type = "submit" value = "Submit">
+</form>
+
+{%endblock content%}  

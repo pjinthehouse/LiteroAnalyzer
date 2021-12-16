@@ -1,0 +1,36 @@
+{%extends 'layouts1.html'%}
+
+{%block content%}
+<br/><br/>
+<form action = "/select" method = "post">
+	<!--input type = "checkbox" value = "all" name = "entities"> All <br/-->
+	<!--table class="wp-table" style="width:400px">
+	<tr>
+		<th>Character name</th>
+		<th>Yes</th>
+		<th>No</th>
+	</tr>
+	{% for i in names %}
+		<tr>
+		<td>{{i}}</th>
+		<td><input type = "checkbox" value = "{{i}}" name = "yes"> </td>
+		<td><input type = "checkbox" value = "{{i}}" name = "no"> </td>
+		</tr>
+		<br/>
+	{% endfor %}
+	</table-->
+	<div>
+	<input type = "checkbox" value = "all" name = "yes"> All <br/>
+	{% for i in names %}
+		<input type = "checkbox" value = "{{i}}" name = "yes"> {{i}}
+		<br/>
+	{% endfor %}
+	</div>
+	<br/>
+	<p>Any other characters? Add them here:</p>
+	<input type="text" name="extra_characters">
+	<input type = "submit" value = "Submit">
+</form>
+<br/>
+<br/>
+{%endblock content%}

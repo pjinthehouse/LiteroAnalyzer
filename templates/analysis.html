@@ -1,0 +1,42 @@
+{%extends 'layouts1.html'%} 
+
+{%block content%}  
+Top characters associated with each emotion<br>
+<table>
+{% for key in emotion_keys %}
+<tr>
+	<td><b>{{key}} : </b></td>
+	{% for j in emotion_list[key] %}
+		<td>{{j}}</td>
+	{% endfor %}
+</tr>
+{% endfor %}
+</table>
+<br><br>
+
+Top  characters associated with each social characteristic: <br>
+<table>
+{% for key in social_keys %}
+<tr>
+	<td><b>{{key}} : </b></td>
+	{% for j in social_list[key] %}
+		<td>{{j}}</td>
+	{% endfor %}
+</tr>
+{% endfor %}
+</table>
+<br/><br/>
+
+Top characters associated with language-style impact:<br/>
+<table>
+{% for key in language_keys %}
+<tr>
+	<td><b>{{key}} : </b></td>
+	{% for j in language_list[key] %}
+		<td>{{j}}</td>
+	{% endfor %}
+</tr>
+{% endfor %}
+</table>
+<br><br>
+{%endblock content%}

@@ -1,0 +1,14 @@
+{%extends 'layouts1.html'%}
+
+{%block content%}  
+
+<p><h3> Choose the type of analysis: </h3></p>
+	<form action = "/char_nw_results" method = "post">
+		<input type = "submit" value = "Full analysis">
+	</form>
+	<br/>
+	<form action = "/chapter_char_nw_results" method = "post">
+		<input type = "submit" value = "Chapter-wise analysis">
+	</form>
+
+{%endblock content%}  

@@ -1,0 +1,28 @@
+{%extends 'layouts1.html'%}
+
+{%block content%}   
+<form action = "/character_networks" method = "post">
+<label> Choose entities: </label>
+<br />
+<select id= "entities" name="character1">
+	{% for i in names %}
+		<option value= "{{i}}"> {{i}} </option>
+	{% endfor %}  
+</select>  
+<br />
+<select id= "entities" name="character2">
+	{% for i in names %}
+		<option value= "{{i}}"> {{i}} </option>
+	{% endfor %}  
+</select>  
+<br />
+<select id= "entities" name="character3">
+	{% for i in names %}
+		<option value= "{{i}}"> {{i}} </option>
+	{% endfor %}  
+</select>  
+<br />
+	<input type = "submit" value="Submit"> </input>
+</form>
+
+{%endblock content%}  

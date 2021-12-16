@@ -1,0 +1,32 @@
+{%extends 'layouts1.html'%}
+
+{%block content%} 
+<p>
+	Select any one character for personality profiling.
+</p>
+
+
+<form action = "/watson" method = "post">
+<label> Choose entity: </label>
+<select id= "entities" name="character">
+	{% for i in names %}
+		<option value= "{{i}}"> {{i}} </option>
+	{% endfor %}  
+</select>  
+<div>
+	<input type = "checkbox" value = "all" name = "traits"> All <br/>
+	{% for i in traits %}
+		<input type = "checkbox" value = "{{i}}" name = "traits"> {{i}}
+		<br/>
+	{% endfor %}
+</div>
+	<input type = "submit" value="Submit"> </input>
+</form>
+<br/><br/><br/>
+<p> For top 3 characters in each personality trait, click below</p>
+<form action="\emotion_analysis" method="post">
+	<input type = "submit" value = "Analysis"/>
+</form>
+<br/>
+<br/>
+{%endblock content%}

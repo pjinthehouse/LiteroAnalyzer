@@ -1,0 +1,26 @@
+{%extends 'layouts1.html'%}
+
+{%block content%}   
+<div class="container">
+<p>
+	<h3>Select any of the following:</h3>
+</p>
+<div class="container">
+<form action = "/personality_profiling" method = "post" enctype="multipart/form-data">
+    <input type = "submit" value="Personality profiling">  
+</form> 
+<br/><br/>
+<form action = "/network_graph" method = "post" enctype = "multipart/form-data">
+	<input type = "submit" value = "Network Graph">
+</form>
+<br/><br/> 
+<form action = "/single_chapter_analysis" method = "post" enctype = "multipart/form-data">
+	<input type = "submit" value = "Chapter-wise analysis">
+</form> 
+<br/><br/>
+<form action = "/custom_character_networks" method = "post">
+	<input type = "submit" value = "Custom character networks">
+</form>
+</div>
+</div>
+{%endblock content%}
